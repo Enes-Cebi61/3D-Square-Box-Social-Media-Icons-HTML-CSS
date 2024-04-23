@@ -1,0 +1,159 @@
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #D3D3D3;
+}
+
+/* Unordered list styles */
+ul {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* List item styles */
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 10px;
+}
+
+/* List item pseudo-element styles for the animation */
+ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 120px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(0.8);
+}
+
+/* Hover effect on the list item */
+ul li:hover:before {
+    transition-delay: 0.2s;
+    opacity: .7;
+    transform: scale(1);
+}
+
+/* Anchor tag styles */
+ul li a {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transition: 0.5s;
+    background: #ccc;
+}
+
+/* Hover effect on the anchor tag */
+ul li:hover a {
+    transform: translateY(-10px);
+}
+
+/* Font Awesome icon styling */
+ul li a span:before {
+    font-family: fontAwesome;
+    text-align: center;
+    font-size: 40px;
+    line-height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #262626;
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+/* Different icons for each list item */
+ul li:nth-child(1) a span:before {
+    content: '\f09a';
+    color: #3b5999;
+}
+
+ul li:nth-child(2) a span:before {
+    content: '\f099';
+    color: #55acee;
+}
+
+ul li:nth-child(3) a span:before {
+    content: '\f167';
+    color: #FF0000;
+}
+
+ul li:nth-child(4) a span:before {
+    content: '\f0e1';
+    color: #0077B5;
+}
+
+ul li:nth-child(5) a span:before {
+    content: '\f16d';
+    color: #e4405f;
+}
+
+/* Hover effect on the icon */
+ul li:hover a span:before {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+/* Another Font Awesome icon styling */
+ul li a span:after {
+    font-family: fontAwesome;
+    text-align: center;
+    font-size: 40px;
+    line-height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #fff;
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transform: rotateX(90deg) translateY(50%);
+}
+
+/* Hover effect on the second icon */
+ul li:hover a span:after {
+    transform: rotateX(0) translateY(0);
+}
+
+/* Different icons for each list item's second icon */
+ul li:nth-child(1) a span:after {
+    content: '\f09a';
+    background: #3b5999;
+}
+
+ul li:nth-child(2) a span:after {
+    content: '\f099';
+    background: #55acee;
+}
+
+ul li:nth-child(3) a span:after {
+    content: '\f167';
+    background: #FF0000;
+}
+
+ul li:nth-child(4) a span:after {
+    content: '\f0e1';
+    background: #0077B5;
+}
+
+ul li:nth-child(5) a span:after {
+    content: '\f16d';
+    background: #e4405f;
+}
